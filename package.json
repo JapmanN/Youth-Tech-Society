@@ -1,0 +1,16 @@
+{
+  "name": "yts_v2",
+  "version": "1.0.0",
+  "description": "Creating Youth Tech Society (YTS) for the second time, cause why not?",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Japman Nagra",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}

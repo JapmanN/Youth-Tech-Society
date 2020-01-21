@@ -1,0 +1,59 @@
+#footer-bg {
+    background: linear-gradient(50deg,#306eff,#3030ff)!important;
+  }
+  
+  .footer-titles {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family:  Montserrat, Quicksand, Raleway,sans-serif;
+    color: white;
+    letter-spacing: 0.3px;
+  }
+  
+  .footer-links {
+    font-family: Quicksand, Raleway, Montserrat, sans-serif;
+    color: #d3dce6;
+    transition: 0.5s;
+    text-decoration: none;
+  }
+  
+  .footer-links:hover {
+    font-family: Quicksand, Raleway, Montserrat, sans-serif;
+    color: white;
+    transition: 0.5s;
+    text-decoration: none;
+  }
+  
+  .footer-social-media {
+    margin: 0 10px;
+    font-size: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 11px 13px; 
+    transition: 0.5s;
+    color: #212529;
+  }
+  
+  .footer-social-media:hover {
+    margin: 0 10px;
+    font-size: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 11px 13px; 
+    transform: scale(1.2);
+    transition: 0.5s;
+    color: white;
+    border: 1px solid transparent;
+  }
+  
+  .footer-privacy-legal {
+    text-decoration: underline;
+    color: gray;
+    transition: 0.3s;
+  }
+  
+  .footer-privacy-legal:hover {
+    text-decoration: underline;
+    color: lightgray;
+    transition: 0.3s;
+  }
