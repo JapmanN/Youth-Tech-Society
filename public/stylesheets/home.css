@@ -1,3 +1,7 @@
+body {
+  font-family: "Quicksand", "Montserrat", Arial !important;
+}
+
 /* =============================================== */
 /* THW ROEDS "YOUTH TECH SOCIETY" ON THE MAIN PAGE */
 /* =============================================== */
@@ -43,6 +47,68 @@
     font-size: 1.3rem;
 }
 
-/* ================================ */
-/* MAIN/FIRST IMAGE ON THE HOMEPAGE */
-/* ================================ */
+/* =============================== */
+/* OUR INITIATIVES ON THE HOMEPAGE */
+/* =============================== */
+.section-title {
+  font-family: "Montserrat", "Raleway", "Quicksand", Arial;
+}
+
+.card-title {
+  font-size: 2rem;
+}
+
+.card-icons {
+  border-radius: 50px;
+  font-size: 2rem;
+  padding: 10px 13px;
+  box-shadow: 0 .5rem 1rem rgba(48,110,255,.6)!important;
+}
+
+.initiative-card {
+  transition: all 0.4s;
+  border-radius: 10px;
+  border: 10px solid gray;
+}
+
+.initiative-card:hover {
+  transform: scale(1.06);
+  background: royalblue;
+  color: white !important;
+}
+
+/* ============================================ */
+/* ALL CODE FOR THE BOTTOM FEEDBACK STARTS HERE */
+/* ============================================ */
+.feedback-title {
+  font-family: Quicksand, Raleway, Montserrat, sans-serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.feedback-para {
+  font-family: Quicksand, Raleway, Montserrat, sans-serif;
+}
+
+.icon-for-bottom {
+  font-size: 50px;
+  color: white;
+}
+
+.privacy-bg {
+  background: linear-gradient(50deg,#273444,#272b44)!important;
+}
+
+
+
+/* GRADIENT STRIPE */
+.stripe {
+  background: -webkit-gradient(linear,left bottom,right top,color-stop(0%,rgba(142,205,245,1)),color-stop(100%,rgba(118,145,214,1)));
+}
+
+
+#newsletter-h1 {
+  font-family: "Raleway", "Montserrat", "Quicksand", sans-serif;
+  color: white;
+  font-weight: bold;
+}
