@@ -19,11 +19,15 @@ app.get('/', function(req, res) {
     res.render("home");
 });
 
+// NEWSLETTER SIGNUP ROUTE
 app.post("/newsletter", function(req, res) {
     var email = req.body.email;
     console.log(email);
     res.redirect('/');
 });
+
+// CONTACT --YTS STAFF-- ROUTE
+
 
 // ==============
 // SERVER STARTUP
