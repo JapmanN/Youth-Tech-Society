@@ -3,7 +3,13 @@
 // ====================
 const express = require('express'),
 app           = express(),
-bodyParser    = require("body-parser");
+bodyParser    = require("body-parser"),
+mongoose      = require("mongoose");
+
+// ==================
+// REQUIRE ALL MODELS
+// ==================
+const Article = require("./models/article");
 
 // =================
 // APP CONFIGURATION
@@ -11,6 +17,7 @@ bodyParser    = require("body-parser");
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended: true}));
+mongoose.connect('mongodb://localhost:27017/yts', {useNewUrlParser: true});
 
 // ==================
 // APPLICATION ROUTES
@@ -20,7 +27,25 @@ app.get('/', function(req, res) {
 });
 
 app.get('/articles', (req, res) => {
-    res.render("articles");
+    Article.find({}, function(err, articles) {
+        if(err) {
+            console.log(err);
+        } else {
+            res.render("articles", {articles: articles});
+        }
+    });
+});
+
+// POSTING A NEW ARTICLE ROUTE
+app.post("/post_article", (req, res) => {
+    var newArticle = {title: req.body.title, description: req.body.description, content: req.body.content};
+    Article.create(newArticle, function(err, newlyCreated) {
+        if(err) {
+            console.log(err);
+        } else {
+            res.redirect("/articles");
+        }
+    });
 });
 
 // NEWSLETTER SIGNUP ROUTE

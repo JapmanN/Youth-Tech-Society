@@ -1,1 +1,17 @@
 <h1>Articles page</h1>
+
+<form action="/post_article" method="POST">
+    <input type="text" placeholder="title of article" name="title">
+    <br><br>
+    <input type="text" placeholder="description of article" name="description">
+    <br><br>
+    <textarea name="content" cols="30" rows="10" placeholder="body of the article"></textarea>
+    <br><br>
+    <input type="submit">
+</form>
+
+<% articles.forEach(function(article) { %>
+    <p><strong>title: </strong><%= article.title %></p>
+    <p><strong>description: </strong><%= article.description %></p>
+    <p><strong>body: </strong><%= article.content %></p>
+<% }); %>
