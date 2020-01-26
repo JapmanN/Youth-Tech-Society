@@ -77,29 +77,6 @@ body {
   color: white !important;
 }
 
-/* ============================================ */
-/* ALL CODE FOR THE BOTTOM FEEDBACK STARTS HERE */
-/* ============================================ */
-.feedback-title {
-  font-family: Quicksand, Raleway, Montserrat, sans-serif;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.feedback-para {
-  font-family: Quicksand, Raleway, Montserrat, sans-serif;
-}
-
-.icon-for-bottom {
-  font-size: 50px;
-  color: white;
-}
-
-.privacy-bg {
-  background: linear-gradient(50deg,#273444,#272b44)!important;
-}
-
-
 
 /* GRADIENT STRIPE */
 .stripe {

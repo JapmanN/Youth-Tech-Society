@@ -1,3 +1,5 @@
+<%- include('partials/header') %>
+
 <h1>Articles page</h1>
 
 <form action="/post_article" method="POST">
@@ -15,3 +17,5 @@
     <p><strong>description: </strong><%= article.description %></p>
     <p><strong>body: </strong><%= article.content %></p>
 <% }); %>
+
+<%- include('partials/footer') %>
