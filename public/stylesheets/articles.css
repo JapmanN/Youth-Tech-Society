@@ -1,0 +1,73 @@
+/* ALL CODE FOR THE FIRST GLANCE/APPLY PART STARTS HERE */
+#Articles {
+    font-family: Montserrat, Quicksand, Raleway, sans-serif;
+    font-weight: 800;
+    color: white;
+    background: rgba(0,0,0,.5);
+    border-radius: 25px;
+    display: inline;
+}
+  
+#mainJumbotron {
+    padding: 130px 0;
+    overflow: hidden;
+    /*  background: linear-gradient(150deg,#53f 15%,#05d5ff 70%,#a6ffcb 94%);
+    */  background: linear-gradient(225deg, #53f, #53f , #05d5ff, #a6ffcb, #abe4ff, #d9abff, #306eff,#3030ff, #7415d9, #1979f0);
+    background-size: 300% 300%;
+    box-sizing: border-box;
+    display: table;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    -webkit-animation: Rainbow 15s ease infinite;
+    -moz-animation: Rainbow 15s ease infinite;
+    animation: Rainbow 7s ease infinite;
+}
+
+@keyframes Rainbow {
+    0% {
+        background-position: 94% 0%; }
+    50% {
+        background-position: 7% 100%; }
+    100% {
+        background-position: 94% 0%; } 
+}
+
+
+#articles_desc {
+    font-family: "Quicksand", "Raleway", "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.why_us {
+    font-family: "Quicksand", "Raleway", "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.section_header {
+    font-family: "Montserrat", "Raleway", "Quicksand", sans-serif;
+    font-weight: bold;
+}
+
+/* ======================= */
+/* DISPLAYING THE ARTICLES */
+/* ======================= */
+.article_bg {
+    background: #e7e7e7;
+}
+
+.article_title {
+    font-family: "Quicksand", "Raleway", "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+.article_description {
+    font-family: "Quicksand", "Raleway", "Montserrat", sans-serif;
+    font-size: 1.08rem;
+}
+
+.article_btn {
+    font-family: "Quicksand", "Raleway", "Montserrat", sans-serif;
+}

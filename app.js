@@ -38,7 +38,7 @@ app.get('/articles', (req, res) => {
 
 // POSTING A NEW ARTICLE ROUTE
 app.post("/post_article", (req, res) => {
-    var newArticle = {title: req.body.title, description: req.body.description, content: req.body.content};
+    var newArticle = {title: req.body.title, description: req.body.description, image: req.body.image, content: req.body.content};
     Article.create(newArticle, function(err, newlyCreated) {
         if(err) {
             console.log(err);

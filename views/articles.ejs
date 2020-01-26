@@ -1,21 +1,61 @@
 <%- include('partials/header') %>
 
-<h1>Articles page</h1>
+<head>
+    <link rel="stylesheet" href="./stylesheets/articles.css">
+</head>
+
+<div id="mainJumbotron" class="jumbotron text-center">
+    <h1 class="display-1 pb-3 px-4 " id="Articles">Articles</h1>
+</div>
+
+<div class="bg-light pt-5 pb-4">
+    <div class="container">
+        <p id="articles_desc">The Article Initiative is home to a wide network of tech-related articles. The goal of this initiative is to provide conceptual understanding to readers about technology concepts in an easy to understand way. These articles will explain these topics using diagrams, graphs and videos; allowing readers to learn at their own pace. YTS Articles covers all aspects of a topic while using simple vocabulary and easy-to-follow drawings. Ensuring these aspects are checked means simple articles for anyone to learn from. So, why don't you click on an article and learn today!</p>
+        <div class="d-none d-lg-block">
+            <div class="d-flex justify-content-between why_us pt-3">
+                <p><i class="fas fa-check text-success"></i>    Covering all aspects of a topic</p>
+                <p><i class="fas fa-check text-success"></i>    Using simple vocabulary</p>
+                <p><i class="fas fa-check text-success"></i>    Descriptive yet simple drawings</p>
+            </div>            
+        </div>
+    </div>
+</div>
+
+<div class="article_bg">
+    <div class="container py-4">
+        <!-- <h1 class="text-dark section_header">Articles</h1> -->
+        <div class="row">
+            <% articles.forEach(function(article) { %>
+                <div class="media mb-4 p-4 bg-light">
+                    <img src="<%= article.image %>" class="align-self-center mr-3 w-25" alt="<%= article.title %>">
+                    <div class="media-body">
+                    <h3 class="mt-0 article_title"><%= article.title %></h3>
+                    <p class="article_description"><%= article.description %></p>
+                    <a href="" class="btn btn-primary article_btn">Read article</a>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>    
+</div>
+
 
 <form action="/post_article" method="POST">
     <input type="text" placeholder="title of article" name="title">
     <br><br>
     <input type="text" placeholder="description of article" name="description">
     <br><br>
+    <input type="text" placeholder="image for article" name="image">
+    <br><br>
     <textarea name="content" cols="30" rows="10" placeholder="body of the article"></textarea>
     <br><br>
     <input type="submit">
 </form>
 
-<% articles.forEach(function(article) { %>
+<!-- <% articles.forEach(function(article) { %>
     <p><strong>title: </strong><%= article.title %></p>
     <p><strong>description: </strong><%= article.description %></p>
     <p><strong>body: </strong><%= article.content %></p>
-<% }); %>
+<% }); %> -->
 
 <%- include('partials/footer') %>
