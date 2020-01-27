@@ -22,16 +22,16 @@
 </div>
 
 <div class="article_bg">
-    <div class="container py-4">
+    <div class="container py-5">
         <!-- <h1 class="text-dark section_header">Articles</h1> -->
         <div class="row">
             <% articles.forEach(function(article) { %>
                 <div class="media mb-4 p-4 bg-light">
                     <img src="<%= article.image %>" class="align-self-center mr-3 w-25" alt="<%= article.title %>">
                     <div class="media-body">
-                    <h3 class="mt-0 article_title"><%= article.title %></h3>
-                    <p class="article_description"><%= article.description %></p>
-                    <a href="" class="btn btn-primary article_btn">Read article</a>
+                        <h3 class="mt-0 article_title"><%= article.title %></h3>
+                        <p class="article_description"><%= article.description %></p>
+                        <a href="/articles/<%= article._id %>" class="btn btn-primary article_btn">Read article</a>
                     </div>
                 </div>
             <% }); %>

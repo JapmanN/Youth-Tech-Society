@@ -22,16 +22,30 @@ mongoose.connect('mongodb://localhost:27017/yts', {useNewUrlParser: true});
 // ==================
 // APPLICATION ROUTES
 // ==================
+
+// HOME PAGE
 app.get('/', function(req, res) {
     res.render("home");
 });
 
+// ARTICLES PAGE
 app.get('/articles', (req, res) => {
     Article.find({}, function(err, articles) {
         if(err) {
             console.log(err);
         } else {
             res.render("articles", {articles: articles});
+        }
+    });
+});
+
+// READ ARTICLE PAGE
+app.get('/articles/:id', (req, res) => {
+    Article.findById(req.params.id, function(err, foundArticle) {
+        if(err) {
+            console.log(err)
+        } else {
+            res.render("show", {article: foundArticle});
         }
     });
 });
