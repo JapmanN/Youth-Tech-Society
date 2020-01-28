@@ -1,7 +1,7 @@
 <%- include('partials/header') %>
 
 <head>
-    <link rel="stylesheet" href="./stylesheets/articles.css">
+    <link rel="stylesheet" href="/stylesheets/articles.css">
 </head>
 
 <div id="mainJumbotron" class="jumbotron text-center">
@@ -35,22 +35,11 @@
                     </div>
                 </div>
             <% }); %>
+            <!-- AFTER AUTHENTICATION, THIS WILL ONLY SHOW IF 'ADMIN' IS LOGGED IN -->
+            <a href="/new_article" class="btn btn-primary btn-block">Create a new article</a>
         </div>
     </div>    
 </div>
-
-
-<form action="/post_article" method="POST">
-    <input type="text" placeholder="title of article" name="title">
-    <br><br>
-    <input type="text" placeholder="description of article" name="description">
-    <br><br>
-    <input type="text" placeholder="image for article" name="image">
-    <br><br>
-    <textarea name="content" cols="30" rows="10" placeholder="body of the article"></textarea>
-    <br><br>
-    <input type="submit">
-</form>
 
 <!-- <% articles.forEach(function(article) { %>
     <p><strong>title: </strong><%= article.title %></p>

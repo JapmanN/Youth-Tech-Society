@@ -39,6 +39,8 @@ app.get('/articles', (req, res) => {
     });
 });
 
+app.get('/new_article', (req, res) => { res.render("new_article"); });
+
 // READ ARTICLE PAGE
 app.get('/articles/:id', (req, res) => {
     Article.findById(req.params.id, function(err, foundArticle) {
