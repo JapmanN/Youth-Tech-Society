@@ -66,7 +66,7 @@ app.post("/post_article", (req, res) => {
 app.post("/newsletter", function(req, res) {
     var email = req.body.email;
     console.log(email);
-    res.redirect('/');
+    res.redirect('back');
 });
 
 // CONTACT --YTS STAFF-- ROUTE

@@ -1,0 +1,16 @@
+body {
+    font-family: "Quicksand", "Montserrat", Arial !important;
+}
+
+#title {
+    font-family: "Raleway", "Montserrat", sans-serif;
+    font-weight: bold;
+}
+
+#description {
+    font-family: "Quicksand", "Raleway", "Montserrat", sans-serif;
+}
+
+.content {
+    font-family: "Quicksand", "Raleway", "Montserrat", sans-serif;
+}

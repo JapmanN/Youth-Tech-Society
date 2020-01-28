@@ -1,2 +1,28 @@
-<h1><%= article.title %></h1>
-<p><%= article.content %></p>
+<%- include('partials/header') %>
+
+<head>
+    <link rel="stylesheet" href="/stylesheets/show.css">
+</head>
+
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4" id="title"><%= article.title %></h1>
+        <p class="lead" id="description"><%= article.description %></p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 border border-primary">
+
+        </div>
+        <div class="col-lg-8">
+            <div class="content">
+               <p><%= article.content %></p> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %>
