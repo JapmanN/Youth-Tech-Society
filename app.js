@@ -77,7 +77,6 @@ app.get("/articles/:id/edit", function(req, res){
         if(err) {
             console.log(err)
         } else {
-            console.log(foundArticle._id);
             res.render("edit", {article: foundArticle});
         }
     });
@@ -93,6 +92,18 @@ app.put("/articles/:id", function(req, res){
        }
     });
 });
+
+// DELETE AN EXISTING ARTICLE
+app.delete("/articles/:id", function(req, res){
+    Article.findByIdAndRemove(req.params.id, function(err){
+       if(err){
+           res.redirect("/articles");
+           console.log(err);
+       } else {
+           res.redirect("/articles");
+       }
+    });
+ });
 
 // NEWSLETTER SIGNUP ROUTE
 app.post("/newsletter", function(req, res) {

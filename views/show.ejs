@@ -9,7 +9,14 @@
     <div class="container">
         <h1 class="display-4" id="title"><%= article.title %></h1>
         <p class="lead" id="description"><%= article.description %></p>
+
+        <!-- Edit Article Button -->
         <a class="btn btn-warning" href="/articles/<%= article._id %>/edit">Edit</a>
+
+        <!-- Delete Article Button -->
+        <form action="/articles/<%= article._id %>?_method=DELETE" method="POST">
+            <button class="btn btn-danger">Delete</button>
+        </form>
         <!-- <p class="lead" id="description">Written by: <%= article.author %></p> -->
     </div>
 </div>
