@@ -11,12 +11,30 @@
         <p class="lead" id="description"><%= article.description %></p>
 
         <!-- Edit Article Button -->
-        <a class="btn btn-warning" href="/articles/<%= article._id %>/edit">Edit</a>
+        <a class="btn btn-warning" href="/articles/<%= article._id %>/edit">Edit Article</a>
+        
+        <!-- Button to trigger modal -->
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteArticle">
+            Delete Article
+        </button>
 
-        <!-- Delete Article Button -->
-        <form action="/articles/<%= article._id %>?_method=DELETE" method="POST">
-            <button class="btn btn-danger">Delete</button>
-        </form>
+        <!-- Prompt to Confirm Article Delete -->
+        <div class="modal fade" id="deleteArticle" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body font-weight-bold text-center">
+                        Are you sure you want to delete this article?
+                    </div>
+                    <div class="modal-footer mx-auto">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <!-- Delete Article Button -->
+                        <form action="/articles/<%= article._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- <p class="lead" id="description">Written by: <%= article.author %></p> -->
     </div>
 </div>
