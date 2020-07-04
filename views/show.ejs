@@ -9,6 +9,7 @@
     <div class="container">
         <h1 class="display-4" id="title"><%= article.title %></h1>
         <p class="lead" id="description"><%= article.description %></p>
+        <!-- <p class="lead" id="description">Written by: <%= article.author %></p> -->
     </div>
 </div>
 
@@ -19,7 +20,7 @@
         </div>
         <div class="col-lg-8">
             <div class="content">
-               <p><%= article.content %></p> 
+               <p><%- article.content %></p> 
             </div>
         </div>
     </div>

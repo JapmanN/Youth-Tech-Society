@@ -1,0 +1,304 @@
+body {
+    font-family: "Quicksand", "Raleway", "Montserrat", sans-serif;
+}  
+  
+  /* ALL CODE FOR THE FIRST GLANCE/APPLY PART STARTS HERE */
+  #Apply {
+    font-family: Montserrat, Quicksand, Raleway, sans-serif;
+    font-weight: 800;
+    color: white;
+    background: rgba(0,0,0,.5);
+    border-radius: 25px;
+    display: inline;
+  }
+  
+  #mainJumbotron {
+    padding: 130px 0;
+    overflow: hidden;
+  /*  background: linear-gradient(150deg,#53f 15%,#05d5ff 70%,#a6ffcb 94%);
+  */  background: linear-gradient(225deg, #53f, #53f , #05d5ff, #a6ffcb, #abe4ff, #d9abff, #306eff,#3030ff, #7415d9, #1979f0);
+    background-size: 300% 300%;
+    box-sizing: border-box;
+    display: table;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    -webkit-animation: Rainbow 15s ease infinite;
+    -moz-animation: Rainbow 15s ease infinite;
+    animation: Rainbow 7s ease infinite;
+  }
+  
+  @-webkit-keyframes Rainbow {
+    0% {
+      background-position: 94% 0%; }
+    50% {
+      background-position: 7% 100%; }
+    100% {
+      background-position: 94% 0%; } 
+    }
+  /*  padding: 100px 0;*/
+  
+  
+  
+  
+  #btn-apply {
+    border-radius: 25px;
+    font-family: Montserrat, Raleway, Quicksand, sans-serif;
+    font-weight: 400;
+    transition: 0.5s;
+  }
+  
+  #btn-apply:hover {
+    border-radius: 5px;
+    transition: 0.5s;
+    font-family: Montserrat, Raleway, Quicksand, sans-serif;
+    font-weight: 400;
+  }
+  
+  
+  /*======================================================*/
+  
+  
+  /* ALL CODE FOR THE ILLUSTRATION AND BENEFITS PART STARTS HERE */
+  
+  ul.timeline {
+      list-style-type: none;
+      position: relative;
+  }
+  
+  ul.timeline:before {
+      content: ' ';
+      background: /*#d4d9df*/ gray;
+      display: inline-block;
+      position: absolute;
+      left: 29px;
+      width: 2px;
+      height: 100%;
+      z-index: 400;
+  }
+  
+  ul.timeline > li {
+      margin: 50px 0;
+      padding-left: 20px;
+  }
+  
+  ul.timeline > li:before {
+      content: ' ';
+      background: white;
+      display: inline-block;
+      position: absolute;
+      border-radius: 50%;
+      border: 3px solid #22c0e8;
+      left: 20px;
+      width: 20px;
+      height: 20px;
+      z-index: 400;
+  }
+  
+  ul.timeline .benefits-title {
+    font-family: Quicksand, Raleway, sans-serif;
+    font-size: 20px;
+    color: #007bff;
+  }
+  
+  ul.timeline .benefits-title:hover {
+    font-family: Quicksand, Raleway, sans-serif;
+    font-size: 20px;
+    color: #007bff;
+  }
+  
+  ul.timeline .benefits-para {
+    font-family: Quicksand, Raleway, sans-serif;
+    font-size: 18px;
+  }
+  
+  /*======================================================================*/
+  
+  /* ALL CODE FOR THE NEWSLETTER GOES HERE */
+  #newsletter-bg {
+    background: linear-gradient(50deg,#306eff,#3030ff)!important;
+  }
+  
+  #newsletter-h1 {
+    color: white;
+    font-family: Quicksand, Montserrat, Raleway, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+  }
+  
+  #newsletter-input {
+    border-radius: 25px;
+    padding: 0 5px;
+    text-align: center;
+    font-family: Quicksand, Raleway, Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  
+  /*=======================================================================*/
+  
+  #requirements-bg {
+    background: linear-gradient(50deg,#273444,#272b44)!important;
+  }
+  
+  .requirements-title {
+    text-align: center;
+    font-family: Montserrat, Quicksand, Raleway, sans-serif;
+    font-weight: bold;
+  }
+  
+  .requirements-para {
+    text-align: center;
+    font-family: Quicksand, Raleway, Montserrat, sans-serif;
+    color: #8492a6;
+    font-size: 18px;
+  }
+  
+  .requirements-badge {
+    font-family: Quicksand, Raleway, Montserrat, sans-serif;
+    font-weight: lighter;
+    font-size: 16px;
+    text-align: center;
+    background-color: #d7f0e5;
+    color: #36b37e;
+    font-weight: bold;
+  }
+  
+  .requirements-para-card {
+    text-align: left;
+    font-family: Raleway, Quicksand, Montserrat, sans-serif;
+    color: gray;
+    font-size: 16px;
+  }
+  
+  .requirements-title-card {
+    text-align: left;
+    font-family: Quicksand, Raleway, Montserrat, sans-serif;
+    color: black;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+  }
+  
+  .requirements-icons {
+    font-size: 35px;
+  }
+  
+  .requirements-linkedin {
+    padding: 10px 13px;
+    box-shadow: 0 .5rem 1rem rgba(48,110,255,.6)!important;
+  }
+  
+  .requirements-age {
+    padding: 10px 9px; 
+    box-shadow: 0 .5rem 1rem rgba(255,205,48,.8)!important;
+  }
+  
+  .requirements-slack {
+    padding: 10px 13px;
+    box-shadow: 0 .5rem 1rem rgba(23,162,184,.8)!important;
+  }
+  
+  
+  /*===========================================================*/
+  
+  /* ALL CODE FOR THE ACTUAL POSITIONS DESC STARTS HERE */
+  
+  .positions-dark-bg {
+    background: #05172a!important;
+  }
+  
+  .bg-none {
+    background: none;
+  }
+  
+  .position-icons {
+    font-size: 120px;
+  }
+  
+  
+  #positions-at-YTS {
+    text-align: center;
+    font-family: Montserrat, Quicksand, Raleway, sans-serif;
+    font-weight: bold;
+  }
+  
+  .position-title {
+    font-family: Quicksand, Raleway, Montserrat, sans-serif;
+    font-weight: bold;
+  }
+  
+  .position-para {
+    font-family: Quicksand, Raleway, Montserrat, sans-serif;
+  }
+  
+  .btn-positions {
+    font-family: Quicksand, Raleway, Montserrat, sans-serif;
+  }
+  
+  /*===========================================================*/
+  
+  /* ALL CODE FOR THE NEWSLETTER STARTS HERE */
+  
+  #social-bg {
+    background: #141c3a;
+  }
+  
+  #newsletter-h1 {
+    color: white;
+    font-family: Montserrat, Quicksand, Raleway, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+  }
+  
+  #newsletter-text {
+    font-family: Quicksand, Raleway, Montserrat, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+  }
+  
+  /*===========================================================*/
+  
+  /* ALL CODE FOR THE OPEN POSITIONS STARTS HERE */
+   
+  .open-positions-bg {
+    background: linear-gradient(162deg,#7415d9 0%,#1979f0 100%);
+  }
+  
+  #open-positions {
+    font-family: Montserrat, Quicksand, Raleway, sans-serif;
+    font-weight: bold;
+  }
+  
+  .open-positions-title {
+    font-family: Quicksand, Raleway, Montserrat, sans-serif;
+    color: white;
+    font-size: 22px;
+    transition: 0.3s;
+    text-decoration: none;
+  }
+  
+  .open-positions-title:hover {
+    font-family: Quicksand, Raleway, Montserrat, sans-serif;
+    color: white;
+    font-size: 22px;
+    color: lightgray;
+    transform: 0.3s;
+    text-decoration: underline;
+  }
+  
+  .open-positions-para {
+    font-family: Quicksand, Raleway, Montserrat, sans-serif;
+    color: white;
+  }
+  
+  .btn-open-positions {
+    font-family: Quicksand, Raleway, Montserrat, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.1px;
+    font-size: 16px;
+  }

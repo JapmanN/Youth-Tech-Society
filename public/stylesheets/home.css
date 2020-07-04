@@ -2,6 +2,10 @@ body {
   font-family: "Quicksand", "Montserrat", Arial !important;
 }
 
+#main_img {
+  width: 35%;
+}
+
 /* =============================================== */
 /* THW ROEDS "YOUTH TECH SOCIETY" ON THE MAIN PAGE */
 /* =============================================== */
@@ -66,13 +70,13 @@ body {
 }
 
 .initiative-card {
-  transition: all 0.4s;
+  transition: all 0.5s;
   border-radius: 10px;
   border: 10px solid gray;
 }
 
 .initiative-card:hover {
-  transform: scale(1.06);
+  transform: scale(1.01);
   background: royalblue;
   color: white !important;
 }

@@ -39,6 +39,11 @@ app.get('/articles', (req, res) => {
     });
 });
 
+// APPLY PAGE
+app.get('/apply', (req, res) => {
+    res.render("apply");
+});
+
 app.get('/new_article', (req, res) => { res.render("new_article"); });
 
 // READ ARTICLE PAGE
@@ -54,7 +59,7 @@ app.get('/articles/:id', (req, res) => {
 
 // POSTING A NEW ARTICLE ROUTE
 app.post("/post_article", (req, res) => {
-    var newArticle = {title: req.body.title, description: req.body.description, image: req.body.image, content: req.body.content};
+    var newArticle = {title: req.body.title, description: req.body.description, image: req.body.image, content: req.body.content, author: req.body.author};
     Article.create(newArticle, function(err, newlyCreated) {
         if(err) {
             console.log(err);
