@@ -1,10 +1,11 @@
 // ====================
 // REQUIRE ALL PACKAGES
 // ====================
-const express = require('express'),
-app           = express(),
-bodyParser    = require("body-parser"),
-mongoose      = require("mongoose");
+const express  = require('express'),
+app            = express(),
+bodyParser     = require("body-parser"),
+mongoose       = require("mongoose"),
+methodOverride = require("method-override");
 
 // ==================
 // REQUIRE ALL MODELS
@@ -18,6 +19,7 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended: true}));
 mongoose.connect('mongodb://localhost:27017/yts', {useNewUrlParser: true});
+app.use(methodOverride("_method"));
 
 // ==================
 // APPLICATION ROUTES
@@ -66,6 +68,29 @@ app.post("/post_article", (req, res) => {
         } else {
             res.redirect("/articles");
         }
+    });
+});
+
+// EDIT AN EXISTING ARTICLE
+app.get("/articles/:id/edit", function(req, res){
+    Article.findById(req.params.id, function(err, foundArticle){
+        if(err) {
+            console.log(err)
+        } else {
+            console.log(foundArticle._id);
+            res.render("edit", {article: foundArticle});
+        }
+    });
+});
+
+// UPDATE THE ARTICLE
+app.put("/articles/:id", function(req, res){
+    Article.findByIdAndUpdate(req.params.id, req.body.article, function(err, updatedArticle){
+       if(err){
+           res.redirect("/articles");
+       } else {
+           res.redirect("/articles/" + req.params.id);
+       }
     });
 });
 
