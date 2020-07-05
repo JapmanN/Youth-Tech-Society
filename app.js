@@ -123,23 +123,30 @@ app.delete("/articles/:id", function(req, res){
     });
  });
 
-//  REGISTER FORM
-app.get("/register", function(req, res) {
-    res.render("register");
+// //  REGISTER FORM
+// app.get("/register", function(req, res) {
+//     res.render("register");
+// });
+
+// app.post("/register", function(req, res) {
+//     var newUser = new User({username: req.body.username});
+//     User.register(newUser, req.body.password, function(err, user) {
+//         if(err) {
+//             console.log(err)
+//             return res.render("register");
+//         }
+//         passport.authenticate("local")(req, res, function() {
+//             res.redirect("/articles");
+//         });
+//     });
+// });
+
+// LOGIN FORM FOR ADMIN
+app.get("/login", function(req, res) {
+    res.render("login");
 });
 
-app.post("/register", function(req, res) {
-    var newUser = new User({username: req.body.username});
-    User.register(newUser, req.body.password, function(err, user) {
-        if(err) {
-            console.log(err)
-            return res.render("register");
-        }
-        passport.authenticate("local")(req, res, function() {
-            res.redirect("/articles");
-        });
-    });
-});
+app.post("/login", passport.authenticate("local", {successRedirect: "/articles", failureRedirect: "/login"}));
 
 // NEWSLETTER SIGNUP ROUTE
 app.post("/newsletter", function(req, res) {
