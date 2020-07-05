@@ -5,12 +5,15 @@ const express  = require('express'),
 app            = express(),
 bodyParser     = require("body-parser"),
 mongoose       = require("mongoose"),
+passport       = require("passport"),
+LocalStrategy  = require("passport-local"),
 methodOverride = require("method-override");
 
 // ==================
 // REQUIRE ALL MODELS
 // ==================
-const Article = require("./models/article");
+const Article = require("./models/article"),
+User = require("./models/user");
 
 // =================
 // APP CONFIGURATION
