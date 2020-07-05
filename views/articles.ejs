@@ -36,7 +36,9 @@
                 </div>
             <% }); %>
             <!-- AFTER AUTHENTICATION, THIS WILL ONLY SHOW IF 'ADMIN' IS LOGGED IN -->
+            <% if(currentUser) { %>
             <a href="/new_article" class="btn btn-primary btn-block">Create a new article</a>
+            <% } %>
         </div>
     </div>    
 </div>

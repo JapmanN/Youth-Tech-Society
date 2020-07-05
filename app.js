@@ -13,7 +13,7 @@ methodOverride = require("method-override");
 // REQUIRE ALL MODELS
 // ==================
 const Article = require("./models/article"),
-User = require("./models/user");
+User          = require("./models/user");
 
 // =================
 // APP CONFIGURATION
@@ -38,6 +38,12 @@ app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+
+
+app.use(function(req, res, next) {
+    res.locals.currentUser = req.user;
+    next();
+});
 
 // ==================
 // APPLICATION ROUTES
@@ -152,6 +158,13 @@ app.get("/logout", function(req, res) {
     req.logout();
     res.redirect("/articles");
 });
+
+// function isLoggedIn(req, res, next) {
+//     if(req.isAuthenticated()) {
+//         return next();
+//     }
+//     res.redirect("/login");
+// }
 
 // NEWSLETTER SIGNUP ROUTE
 app.post("/newsletter", function(req, res) {

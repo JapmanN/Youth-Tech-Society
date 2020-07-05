@@ -11,6 +11,7 @@
         <p class="lead" id="description"><%= article.description %></p>
 
         <!-- Edit Article Button -->
+        <% if(currentUser) { %>
         <a class="btn btn-warning" href="/articles/<%= article._id %>/edit">Edit Article</a>
         
         <!-- Button to trigger modal -->
@@ -35,6 +36,7 @@
                 </div>
             </div>
         </div>
+        <% } %>
         <!-- <p class="lead" id="description">Written by: <%= article.author %></p> -->
     </div>
 </div>
