@@ -123,6 +123,24 @@ app.delete("/articles/:id", function(req, res){
     });
  });
 
+//  REGISTER FORM
+app.get("/register", function(req, res) {
+    res.render("register");
+});
+
+app.post("/register", function(req, res) {
+    var newUser = new User({username: req.body.username});
+    User.register(newUser, req.body.password, function(err, user) {
+        if(err) {
+            console.log(err)
+            return res.render("register");
+        }
+        passport.authenticate("local")(req, res, function() {
+            res.redirect("/articles");
+        });
+    });
+});
+
 // NEWSLETTER SIGNUP ROUTE
 app.post("/newsletter", function(req, res) {
     var email = req.body.email;
