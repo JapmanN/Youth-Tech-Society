@@ -148,6 +148,11 @@ app.get("/login", function(req, res) {
 
 app.post("/login", passport.authenticate("local", {successRedirect: "/articles", failureRedirect: "/login"}));
 
+app.get("/logout", function(req, res) {
+    req.logout();
+    res.redirect("/articles");
+});
+
 // NEWSLETTER SIGNUP ROUTE
 app.post("/newsletter", function(req, res) {
     var email = req.body.email;
