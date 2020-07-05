@@ -24,6 +24,21 @@ app.use(bodyParser.urlencoded({extended: true}));
 mongoose.connect('mongodb://localhost:27017/yts', {useNewUrlParser: true});
 app.use(methodOverride("_method"));
 
+// =================================
+// USER AUTH(passport) CONFIGURATION
+// =================================
+app.use(require("express-session")({
+    secret: "YTS",
+    resave: false,
+    saveUninitialized: false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 // ==================
 // APPLICATION ROUTES
 // ==================
