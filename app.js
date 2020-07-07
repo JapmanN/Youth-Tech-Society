@@ -150,6 +150,11 @@ app.post("/newsletter", function(req, res) {
 
 // CONTACT --YTS STAFF-- ROUTE
 
+// ERROR PAGE
+app.get("*", function(req, res) {
+    // res.render("error");
+    res.redirect("/"); // For now, redirect the user back to the homepage
+});
 
 // ==============
 // SERVER STARTUP
