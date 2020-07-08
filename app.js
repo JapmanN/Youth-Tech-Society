@@ -150,6 +150,10 @@ app.post("/newsletter", function(req, res) {
 
 // CONTACT --YTS STAFF-- ROUTE
 
+app.get("/coding101", function(req, res) {
+    res.render("coding101");
+})
+
 // ERROR PAGE
 app.get("*", function(req, res) {
     // res.render("error");
