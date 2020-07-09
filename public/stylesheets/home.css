@@ -81,6 +81,10 @@ body {
   color: white !important;
 }
 
+/* POSITIONS BACKGROUND */
+.home_positions_bg {
+  background: linear-gradient(50deg,#306eff,#3030ff)!important;
+}
 
 /* GRADIENT STRIPE */
 .stripe {
